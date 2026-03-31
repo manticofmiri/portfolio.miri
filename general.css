@@ -241,4 +241,4 @@ body {
 }
 /* Importar skills */
 @import url('cv.css');
-@import url('skills.css');
+@import url('variables.css');
