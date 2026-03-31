@@ -1,0 +1,273 @@
+/* ========================================
+   🎨 CV MODERNO 2024 - LISTO PARA COPY-PASTE
+======================================= */
+
+/* ========================================
+   🎯 SISTEMA DE SKILLS MODERNO
+======================================= */
+.skills-category,
+.skills-section {
+    margin-bottom: 40px;
+    padding-bottom: 30px;
+    border-bottom: 2px solid #e8ecff;
+}
+
+.skills-category:last-child,
+.skills-section:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+/* 🔥 TÍTULOS h4 MODERNOS */
+.skills-category h4,
+.skills-section h4 {
+    color: var(--primary-color);
+    font-size: 1.4em;
+    font-weight: 700;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    
+    /* Subrayado gradiente animado */
+    border-bottom: 4px solid transparent;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color)) bottom / 0% 4px no-repeat;
+    transition: background-size 0.4s ease;
+    padding-bottom: 12px;
+    margin-bottom: 2.5rem;
+}
+
+.skills-category h4:hover,
+.skills-section h4:hover {
+    background-size: 100% 4px;
+}
+
+/* 🎨 CÍRCULO ÍCONO h4 */
+.skills-category h4 i,
+.skills-section h4 i {
+    font-size: 1.25em;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    padding: 12px;
+    border-radius: 50%;
+    box-shadow: 0 8px 24px rgba(102, 126, 234, 0.3), 0 1px 2px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.skills-category h4:hover i,
+.skills-section h4:hover i {
+    transform: scale(1.05);
+    box-shadow: 0 12px 32px rgba(102, 126, 234, 0.4);
+}
+
+/* 🃏 SKILL CARDS GLASSMORPHISM */
+.skill-item {
+    position: relative;
+    margin-bottom: 25px;
+    padding: 24px;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 16px;
+    border-left: 5px solid var(--primary-color);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+.skill-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+}
+
+/* Barra de progreso */
+.skill-item::before {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    height: 8px;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    border-radius: 4px 0 0 4px;
+    width: 0;
+    animation: skillProgress 2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.skill-item[data-progress="75"]::before { animation-delay: 0.1s; }
+.skill-item[data-progress="80"]::before { animation-delay: 0.2s; }
+.skill-item[data-progress="85"]::before { animation-delay: 0.3s; }
+.skill-item[data-progress="88"]::before { animation-delay: 0.4s; }
+.skill-item[data-progress="90"]::before { animation-delay: 0.5s; }
+.skill-item[data-progress="92"]::before { animation-delay: 0.6s; }
+.skill-item[data-progress="93"]::before { animation-delay: 0.7s; }
+.skill-item[data-progress="95"]::before { animation-delay: 0.8s; }
+.skill-item[data-progress="98"]::before { animation-delay: 0.9s; }
+.skill-item[data-progress="100"]::before { animation-delay: 1s; width: 100% !important; }
+
+@keyframes skillProgress {
+    to { width: attr(data-progress "%"); }
+}
+
+/* Tipografía moderna */
+.skill-item h3 {
+    font-size: 1.15em;
+    font-weight: 600;
+    margin-bottom: 14px;
+    letter-spacing: -0.02em;
+    line-height: 1.4;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--text-primary);
+}
+
+.skill-icon {
+    font-size: 1.7em;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    width: 40px;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.skill-item small {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    font-weight: 400;
+    display: block;
+    margin-top: 0.25rem;
+    font-style: italic;
+}
+
+/* Grid espacioso */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+    margin-top: 20px;
+}
+
+/* ========================================
+   📋 EXPERIENCIA Y BOTONES
+======================================= */
+.experience-item ul,
+.education-item ul {
+    color: var(--text-secondary);
+    margin-top: 1rem;
+    padding-left: 1.5rem;
+}
+
+.experience-item ul li::marker,
+.education-item ul li::marker {
+    content: "▸ ";
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.download-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1.5rem;
+    padding: 0.75rem 1.5rem;
+    background: var(--primary-gradient);
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255,255,255,0.2);
+    box-shadow: 0 8px 32px rgba(102, 126, 234, 0.3), inset 0 1px 0 rgba(255,255,255,0.3);
+}
+
+.download-btn:hover {
+    transform: translateY(-2px);
+}
+
+/* ========================================
+   🌐 SOCIAL Y CONTACTO MODERNO
+======================================= */
+.social-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(16px);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 50%;
+    color: var(--text-primary);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    border-color: var(--primary-color);
+    box-shadow: 0 12px 32px rgba(102, 126, 234, 0.3);
+    color: white;
+}
+
+.contact-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.25rem;
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.contact-item:hover {
+    border-color: var(--primary-color);
+    transform: translateX(4px);
+}
+
+.contact-item i {
+    font-size: 1.25rem;
+    color: var(--primary-color);
+    width: 30px;
+}
+
+/* ========================================
+   📱 RESPONSIVE
+======================================= */
+@media (max-width: 768px) {
+    .skills-grid { 
+        grid-template-columns: 1fr; 
+        gap: 20px; 
+    }
+    .social-links a { width: 48px; height: 48px; }
+    .contact-info { grid-template-columns: 1fr; }
+    .skills-category h4,
+    .skills-section h4 { font-size: 1.2rem; }
+}
+
+/* ========================================
+   ✨ ANIMACIONES
+======================================= */
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.section { animation: fadeInUp 0.8s ease-out; }

@@ -1,0 +1,26 @@
+:root {
+    /* Colores principales */
+    --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --primary-color: #667eea;
+    --secondary-color: #764ba2;
+    --text-primary: #333;
+    --text-secondary: #666;
+    --bg-light: #f8f9ff;
+    --white: #ffffff;
+    --shadow-light: rgba(0,0,0,0.1);
+    --shadow-medium: rgba(0,0,0,0.2);
+    
+    /* Tipografía */
+    --font-family: 'Poppins', sans-serif;
+    --font-size-base: 1rem;
+    
+    /* Espaciado */
+    --spacing-sm: 1rem;
+    --spacing-md: 2rem;
+    --spacing-lg: 3rem;
+    
+    /* Bordes y sombras */
+    --border-radius: 10px;
+    --border-radius-lg: 20px;
+    --box-shadow: 0 10px 30px var(--shadow-light);
+}
